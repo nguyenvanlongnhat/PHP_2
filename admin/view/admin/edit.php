@@ -142,7 +142,7 @@
             </div>
         <div class="wrapper wrapper-content animated fadeInRight">
             <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-12" style="margin: 0 auto;">
                 <div class="ibox ">
                     <div class="ibox-title">
                         <h3>Sửa sản phẩm </h3>
@@ -166,67 +166,70 @@
                     </div>
                     <div class="ibox-content">
                         <div class="row">
-                            <?php 
-                                foreach ($dsspid as $dssp) {
-                                    $name = $dssp["name"];
-                                    $price = $dssp["price"];
-                                    $price_discount = $dssp["price_discount"];
-                                    $img = $dssp["img"];
-                                    $hot = $dssp["hot"];
-                                    $sale = $dssp["discount"];
-                                    $iddm = $dssp["iddm"];
-                                }
-                            ?>
-                                <form role="form" method="post" enctype="multipart/form-data" >
-                                <input type="hidden" name="imgne" value="<?php echo $img;?>">
-                                    <div class="form-group"><label>Tên sản phẩm </label> <input type="text" placeholder="Tên sản phẩm " value="<?php echo $name;?>" class="form-control" name="name"></div>
-                                    <div class="form-group"> <label>Giá </label> <input type="text" placeholder="Giá" class="form-control" value="<?php echo $price;?>" name="gia"></div>
-                                    <div class="form-group"> <label>Giá giảm </label> <input type="text" placeholder="Giá giảm" class="form-control" value="<?php echo $price_discount;?>" name="giagiam"></div>
-                                    <!-- <div class="custom-file" style="margin-bottom:15px">
-                                        <label>Hình ảnh</label> 
-                                        <input type="file" class="custom-file-input" id="validatedCustomFile"   required name="img">
-                                        <label class="custom-file-label" for="validatedCustomFile">Choose img...</label>
-                                        <div class="invalid-feedback">Example invalid custom file feedback</div>
-                                    </div> -->
-                                    <input type="file" name="img" id="" style="margin-bottom:15px">
-                                    <div class="input-group" style="margin-bottom:15px">
-                                        <select class="custom-select" id="inputGroupSelect04" name="iddm">
-                                            <?php 
-                                                foreach ($dsdm as $dm) {
-                                                    if ($dm["iddm"] == $iddm) {
-                                                        $select = "selected ='selected'";
+                        <form method="post" action="index.php?ctrl=dienthoai&act=update" enctype="multipart/form-data" style = "width: 100%">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <p><label><b>Tên điện thoại</b></label> <input name="ten_loai" value="<?=$row['tenDT']?>" class="form-control" type="text" placeholder= "Tên loại"> </p>
+                                    <p> <label><b>Giá</b></label><input name="gia" value="<?=$row['gia']?>" class="form-control" type="text" placeholder="giá"> </p>
+                                    <p><label><b>Giá khuyến mãi</b></label> <input name="giakm" value="<?=$row['giaKM']?>" class="form-control" type="text" placeholder= "giá khuyến mãi"> </p>
+                                    <input type="file" name="img"><img src="../upload/<?=$row['urlHinh']?>" style = "height: 60px; width: 65px;" >
+                                    <p><label><b>Thời điểm nhập</b></label> <input type="date" name="thoidiemnhap" value="<?=$row['thoiDiemNhap']?>" class="form-control" type="text" placeholder= "Thời điểm nhập"> </p>
+                                    <p><label><b>Số lần xem</b></label> <input name="solanxem" value="<?=$row['soLanXem']?>" class="form-control" type="text" placeholder= "Số lần xem"> </p>
+                                    <p  style="margin-bottom: 8px"><label style="margin-bottom: 0px"><b>Hot</b></label><div class="input-group mb-3"><div class="input-group-prepend"><label class="input-group-text" for="inputGroupSelect01">Chọn</label></div>
+                                                <select class="custom-select" id="inputGroupSelect01" name="hot">
+                                                    <?php if($row['hot'] == 1){
+                                                        echo '<option value="0">Không hot</option>
+                                                            <option value="1" selected>Hot</option>';
+                                                    } else{
+                                                        echo '<option value="0" selected>Không hot</option>
+                                                            <option value="1" >Hot</option>';
                                                     }
-                                                    else {
-                                                        $select = "";
+                                                    ?>
+                                                </select>
+                                                </div>
+                                            </p>
+                                </div>
+                                    <div class="form-group col-md-6">
+                                        <p><label><b>Mô tả</b></label> <textarea name="mota" id="" cols="30" rows="10"><?=$row['moTa']?></textarea> </p>
+                                        <p><label><b>Số lần mua</b></label> <input name="solanmua" value="<?=$row['soLanMua']?>" class="form-control" type="text" placeholder= "Số lần mua"> </p>
+                                 
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text" for="inputGroupSelect01">Nhà sản xuất</label>
+                                            </div>
+                                            <select class="custom-select" id="inputGroupSelect01" name="idnsx">
+                                            <?php
+                                                        foreach ($idnsx as $dm) {
+                                                            if($row['idNSX'] == $dm['idNSX']){
+                                                                $s1 = "selected";
+                                                            }else{
+                                                                $s1 = "";
+                                                            }
+                                                            echo '<option value="'.$dm['idNSX'].'" '.$s1.'>'.$dm['tenNSX'].'</option>';
+                                                        }
+                                                    ?>
+                                                </select>
+                                        </div>
+                                        <p  style="margin-bottom: 8px"><label style="margin-bottom: 0px"><b>Ẩn hiện</b></label><div class="input-group mb-3"><div class="input-group-prepend"><label class="input-group-text" for="inputGroupSelect01">Chọn</label></div>
+                                                <select class="custom-select" id="inputGroupSelect01" name="anhien">
+                                                    <?php if($row['anHien'] == 1){
+                                                        echo '<option value="0">Ẩn</option>
+                                                            <option value="1" selected>Hiện</option>';
+                                                    } else{
+                                                        echo '<option value="0" selected>Ẩn</option>
+                                                            <option value="1" >Hiện</option>';
                                                     }
-                                                    echo '<option value="'.$dm["iddm"].'" '.$select.'>'.$dm["name"].'</option>';
-                                                }
-                                            ?>
-                                        </select>
-                                       
-                                    </div>
-                                    
-                                    
-                                    <div>
-                                    <?php 
-                                    if ($hot == 1) {
-                                        $checkhot = "checked";
-                                    }
-                                    else {
-                                        $checkhot = "";
-                                    }
-                                    if ($sale == 1) {
-                                        $checksale = "checked";
-                                    }
-                                    else {
-                                        $checksale = "";
-                                    }
-                                        echo '<div class="form-group"><label>Hot</label> <input type="checkbox" name="hot" id="" '.$checkhot.'></div>
-                                        <div class="form-group"><label>Sale</label> <input type="checkbox" name="sale" id="" '.$checksale.'></div>';
-                                    ?>
-                                        <input class="btn btn-sm btn-primary float-right m-t-n-xs" type="submit" name="submit"><strong>
-                                    </div>
-                                </form>
+                                                    ?>
+                                                </select>
+                                                </div>
+                                            </p>
+                                    <p><label><b>Số lượng tồn kho</b></label> <input name="soluongtonkho" value="<?=$row['soLuongTonKho']?>" class="form-control" type="text" placeholder= "Số lượng tồn kho"> </p>
+                                    <input name="ma_loai" value="<?=$row['idDT']?>" type="hidden">
+                                    <p><button name="nutsave" class="btn btn-outline-primary" type="submit" value="nutsave" style="float: right;">LƯU</button> </p>
+                                </div>
+                            
+                        </div>
+                    </form> 
                             </div>
                             
                         </div>

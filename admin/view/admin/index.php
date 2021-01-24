@@ -150,78 +150,63 @@
                             <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="15" width="100%" >
                                 <thead>
                                 <tr>
-
-                                    <th data-toggle="true">Tên sản phẩm </th>
-                                    <th data-hide="phone">Giá </th>
-                                    <th data-hide="phone">Giá khuyến mãi  </th>
-                                    <th data-hide="all" width="30%" >Hình ảnh</th>
-                                    <th data-hide="phone"  width="10%">Nổi bật</th>
-                                    <th data-hide="phone"  width="10%">Giảm giá</th>
+                                    <th data-toggle="true" width=10%>Tên sản phẩm </th>
+                                    <th data-hide="phone" width=18% >Giá </th>
+                                    <th data-hide="all" width="5%" >Hình ảnh</th>
+                                    <th data-hide="phone"  width="9%">Thời điểm nhập</th>
+                                    <th data-hide="phone"  width="44%">Mô tả</th>
+                                    <th data-hide="phone"  width="13%">Tương tác</th>
+                                    <th data-hide="phone"  width="7%">Nhà sản xuất</th>
+                                    <th data-hide="phone"  width="7%">Ẩn/Hiện</th>
                                     <th class="text-right" data-sort-ignore="true">Action</th>
 
                                 </tr>
                                 </thead>
                                 
                                 <tbody width="100%">
-                                    <td></td>
                                     <?php 
                                         foreach ($getList as $list) {
-                                            // $sale = $list["discount"];
-                                            // $hot = $list["hot"];
-                                            
-                                            // if ($sale == 1) {
-                                            //     $sttsale = "<td style='line-height:150px;'>
-                                            //     <span class='label label-primary'>Có</span>
-                                            // </td>";
-                                            // }
-                                            // else {
-                                            //     $sttsale = "<td width='10%'> </td>";
-                                            // }
-
-                                            // if ($hot == 1) {
-                                            //     $stthot = "<td style='line-height:150px;width='50px''>
-                                            //     <span class='label label-primary'>Có</span>
-                                            // </td>";
-                                            // }
-                                            // else {
-                                            //     $stthot = "<td width='10%'> </td>";
-                                            // }
-                                            // ------------------------- echo 
-                                            // <td style="line-height:150px;">
-                                            // '.$list["price_discount"].'
-                                            // </td>
-                                            
-                                            
-                                            
-                                            // '.$stthot.'
-                                            // '.$sttsale.'
-                                            
-                                            // <td class="text-right" style="line-height:150px;">
-                                            //     <div class="btn-group">
-                                            //         <button class="btn-white btn btn-xs" ><a href="admin.php?act=delete&id='.$list["id"].'">Delete</a></button>
-                                            //         <button class="btn-white btn btn-xs"><a href="admin.php?act=edit&id='.$list["id"].'">Edit</a></button>
-                                            //     </div>
-                                            // </td>
-                                            // ------------------ echo
+                                            if($list['anHien'] == 1){
+                                                $a = "Hiện";
+                                            } else{$a="Ẩn";}
+                                            if($list['hot'] == 1){
+                                                $b = "hot";
+                                            }else{
+                                                $b = "không";
+                                            }
                                             echo '<tr>
-                                            <td style="line-height:150px;">
+                                            <td style="line-height:50px;">
                                                '.$list["tenDT"].'
                                             </td>
-                                            <td style="line-height:150px;">
-                                            '.$list["gia"].'
+                                            <td style="line-height:50px;">
+                                                <div class="row" style="margin: 0 auto;"><b>Giá</b>: '.$list["gia"].'đ</div>
+                                                <div class="row" style="margin: 0 auto;"><b>Khuyến mãi</b>: '.$list["giaKM"].'đ</div>
                                             </td>
-                                            <td style="line-height:150px;text-align: center">
-                                            '.$list["giaKM"].'
-                                             </td>
-                                             <td width="30%" style="line-height:150px;">
-                                            <img src="../upload/'.$list["urlHinh"].'" alt="" width="40%" height="130px">
+                                             <td style="line-height:100px;">
+                                            <img src="../upload/'.$list["urlHinh"].'" alt="" width="55px" height="70px">
                                             </td>
-                                            <td> </td>
-                                            <td></td>
+                                            <td><div class="row" style="margin: 0 auto; padding-top: 40px;">'.$list["thoiDiemNhap"].'</div> </td>
+                                            <td><div class="row" style="margin: 0 auto;">'.$list["moTa"].'</div></td>
+                                            <td><div class="row" style="margin: 0 auto;">
+                                                <b>Số lần xem</b>: '.$list["soLanXem"].'</div>
+                                                <div class="row" style="margin: 0 auto;">
+                                                <b>Số lần mua</b>: '.$list["soLanMua"].'</div>
+                                                <div class="row" style="margin: 0 auto;">
+                                                <b>Tồn kho</b>: '.$list["soLuongTonKho"].'</div>
+                                                <div class="row" style="margin: 0 auto;">
+                                                <b>Hot</b>: '.$b.'</div>
+                                            </td>
+                                            <td><div class="row" style="margin-left: 20px">
+                                                '.$list["tenNSX"].'</div>
+                                            </td>
+                                            <td><div class="row" style="margin-left: 20px">
+                                                '.$a.'</div>
+                                            </td>
                                             <td class="text-right" style="line-height:150px;">
                                                  <div class="btn-group">
-                                                 <button class="btn-white btn btn-xs"><a href="index.php?ctrl=dienthoai&act=del&id='.$list["idDT"].'">Delete</a></button>
-                                                    <button class="btn-white btn btn-xs"><a href="index.php?ctrl=dienthoai&act=edit&id='.$list["idDT"].'">Edit</a></button>
+                                                 <button class="btn-white btn btn-xs"><a href="index.php?ctrl=dienthoai&act=edit&idDT='.$list["idDT"].'">Edit</a></button>
+
+                                                 <button class="btn-white btn btn-xs"><a href="index.php?ctrl=dienthoai&act=delete&idDT='.$list["idDT"].'">Delete</a></button>
                                                  </div>
                                              </td>
                                         </tr>';
