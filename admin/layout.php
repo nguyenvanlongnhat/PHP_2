@@ -15,7 +15,12 @@
     <link href="../admin/view/admin/css/style.css" rel="stylesheet">
 
     <link href="../admin/view/admin/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
-
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea'
+        });
+    </script>
 </head>
 
 <body>
@@ -55,7 +60,7 @@
                         <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Điện thoại</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="index.php?ctrl=dienthoai&act=index">Danh sách điện thoại</a></li>
-                            <li><a href="index.php?ctrl=dienthoai&act=add">Thêm Điện thoại  </a></li>
+                            <li><a href="index.php?ctrl=dienthoai&act=addnew">Thêm Điện thoại  </a></li>
                             
                         </ul>
                     </li>
