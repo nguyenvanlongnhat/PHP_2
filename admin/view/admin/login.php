@@ -8,11 +8,14 @@
 
     <title>INSPINIA | Login</title>
 
-    <link href="../view/admin/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../view/admin/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../admin/view/admin/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../admin/view/admin/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../admin/view/admin/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="../admin/view/admin/css/animate.css" rel="stylesheet">
+    <link href="../admin/view/admin/css/style.css" rel="stylesheet">
 
-    <link href="../view/admin/css/animate.css" rel="stylesheet">
-    <link href="../view/admin/css/style.css" rel="stylesheet">
+    <link href="../admin/view/admin/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+
 
 </head>
 
@@ -42,7 +45,7 @@
                 <!--Continually expanded and constantly improved Inspinia Admin Them (IN+)-->
             </p>
             <p>Login in. To see it in action.</p>
-            <form class="m-t" role="form" action="index.php?act=login" method="post">
+            <form class="m-t" role="form" action="index.php?ctrl=login&act=login" method="post">
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Username" required="" name="user">
                 </div>
@@ -59,7 +62,6 @@
         </div>
     </div>
     <div>
-               <a href = "../model/fbconfig.php">Login with Facebook</a>
             </div>
 
     <!-- Mainly scripts -->

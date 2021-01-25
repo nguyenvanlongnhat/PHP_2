@@ -83,13 +83,13 @@
                 </li>
                
                 <li>
-                    <a href="../admin/view"><i class="fa fa-magic"></i> <span class="nav-label">CSS Animations </span><span class="label label-info float-right">62</span></a>
+                    <a href="view/admin/login.php"><i class="fa fa-magic"></i> <span class="nav-label">CSS Animations </span><span class="label label-info float-right">62</span></a>
                 </li>
                 <li class="landing_link">
                     <a target="_blank" href="admin.php?act=500"><i class="fa fa-star"></i> <span class="nav-label">Landing Page</span> <span class="label label-warning float-right">NEW</span></a>
                 </li>
                 <li class="special_link">
-                    <a href="admin.php?act=500"><i class="fa fa-database"></i> <span class="nav-label">Package</span></a>
+                    <a href="admin.php?act=500"><i class="fa fa-database"></i> <span class="nav-label"><?php echo $_SESSION["admin118"]?></span></a>
                 </li>
             </ul>
 

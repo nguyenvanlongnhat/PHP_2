@@ -1,6 +1,8 @@
 <?php 
 include_once './model/model_nhasanxuat.php';
-
+ob_start();
+session_start();
+$_SESSION["123"] = "ok";
 // class model_nhasanxuat extends model_system {
 //     function getList(){
 //         $sql="SELECT * from dienthoai ";
