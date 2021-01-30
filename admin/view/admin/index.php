@@ -147,11 +147,16 @@
                     <div class="ibox">
                         <div class="ibox-content" style="text-align:center">
 
-                            <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="15" width="100%" >
+                            <table class="footable table table-stripped toggle-arrow-tiny hide_data" data-page-size="15" width="100%" >
                                 <thead>
                                 <tr>
                                     <th data-toggle="true" width=10%>Tên sản phẩm </th>
-                                    <th data-hide="phone" width=18% >Giá </th>
+                                    <?php 
+                                        foreach ($getCount as $soluongsp) {
+                                            $count =  $soluongsp[0];
+                                        }
+                                    ?>
+                                    <th data-hide="phone" width=19% >Giá </th>
                                     <th data-hide="all" width="5%" >Hình ảnh</th>
                                     <th data-hide="phone"  width="9%">Thời điểm nhập</th>
                                     <th data-hide="phone"  width="44%">Mô tả</th>
@@ -162,7 +167,7 @@
 
                                 </tr>
                                 </thead>
-                                
+                                <div class="append"></div>
                                 <tbody width="100%">
                                     <?php 
                                         foreach ($getList as $list) {
@@ -217,6 +222,7 @@
 
 
                                 </tbody>
+                                
                                 <tfoot>
                                 
                                 <tr>
@@ -240,12 +246,45 @@
                             </h3>
 
                         </div>
+                       <div class="row justify-content-center " style="margin-left: -150px; margin-top: 20px">
+                                    
+                                    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                                    <nav aria-label="Page navigation example">
+  <ul class="pagination phantrang">
+    <li class="page-item">
+      <a class="page-link pre " href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+   
+   
+   <?php
+   $totalPage = floor($count / 5); 
+
+   for ($i=1; $i <= $totalPage + 1; $i++) { 
+    echo ' <li class="page-item"><a class="page-link click" id="'.$i.'" href="#"  data-id="'.$i.'"> '.$i.'</a></li>';
+ }
+
+   ?>
+  
+
+    <li class="page-item">
+      <a class="page-link after" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+                                    </div>
+                                    
+                      </div>
                     </div>
                 </div>
             </div>
 
 
         </div>
+        
         <div class="footer">
             <div class="float-right">
                 10GB of <strong>250GB</strong> Free.
@@ -253,7 +292,30 @@
             <div>
                 <strong>Copyright</strong> Example Company &copy; 2014-2018
             </div>
+            
         </div>
 
         </div>
-        
+        <script>
+        var body = document.body; // For Safari
+        var html = document.documentElement; // Chrome, Firefox, IE and Opera places the overflow at the html level, unless else is specified. Therefore, we use the documentElement property for these browsers
+        body.scrollLeft += 130;
+        body.scrollTop += 110;
+        html.scrollLeft += 130;
+        html.scrollTop += 110;
+            $('.click').click(function() {
+                $(body).height(400);
+                $('.hide_data').hide();
+                var count =  $(this).attr("data-id");
+                $.post("../admin/view/admin/modelne.php", {
+                count : count
+            },
+            function(data) {
+                $(".append").html(data);
+            }
+        );
+    }
+   
+
+);
+        </script>

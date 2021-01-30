@@ -2,7 +2,12 @@
     require_once '../system/model_system.php';
     class model_dienthoai extends model_system {
         function getList(){
-            $sql = "SELECT * from dienthoai, nhasanxuat where nhasanxuat.idNSX = dienthoai.idNSX";
+            $sql = "SELECT * from dienthoai, nhasanxuat where nhasanxuat.idNSX = dienthoai.idNSX LIMIT 0,4";
+            $kq = $this->query($sql);
+            return $kq;
+        }
+        function getCount(){
+            $sql = "SELECT COUNT(idDT) as soluongsp from dienthoai";
             $kq = $this->query($sql);
             return $kq;
         }

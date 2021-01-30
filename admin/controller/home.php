@@ -35,6 +35,8 @@ include_once './model/model_dienthoai.php';
         function index(){
             $getList = $this->model->getList();
             $page_file = "../admin/view/admin/index.php";
+            $_SESSION["test"] = "123";
+            $_SESSION["admin15"] = "12";
             require_once "../admin/layout.php";
         }
     }             

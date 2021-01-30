@@ -21,6 +21,7 @@ include_once './model/model_dienthoai.php';
         }
         function index(){
             $getList = $this->model->getList();
+            $getCount = $this->model->getCount();
             $page_file = "../admin/view/admin/index.php";
             require_once "../admin/layout.php";
         }
@@ -67,6 +68,7 @@ include_once './model/model_dienthoai.php';
           }
           function update(){
             if (isset($_POST['nutsave'])&&($_POST['nutsave'])) {
+<<<<<<< HEAD
               $idDT = $_POST['ma_loai'];
               $row = $this->model->detailrecord($idDT);
               $tendt = $_POST['ten_loai'];
@@ -80,6 +82,21 @@ include_once './model/model_dienthoai.php';
                 $target_file = $pathimg . basename($img);
                 move_uploaded_file($_FILES['img']['tmp_name'], $target_file);
               }
+=======
+                $idDT = $_POST['ma_loai'];
+                $row = $this->model->detailrecord($idDT);
+                $tendt = $_POST['ten_loai'];
+                $gia = $_POST['gia'];
+                $giakm = $_POST['giakm'];
+                if ($_FILES['img']['name'] == null) {
+                    $img = $row['urlHinh'];
+                }else{
+                  $img = $_FILES['img']['name'];
+                  $pathimg =  "../upload/";
+                  $target_file = $pathimg . basename($img);
+                  move_uploaded_file($_FILES['img']['tmp_name'], $target_file);
+                }
+>>>>>>> b10a052ef21f585c05f52831f7293c6fa4ffae12
               $thoidiemnhap = $_POST['thoidiemnhap'];
               $mota = $_POST['mota'];
               $solanxem = $_POST['solanxem'];

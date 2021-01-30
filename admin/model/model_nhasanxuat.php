@@ -6,8 +6,8 @@
             $kq= $this->query($sql);
             return $kq;
         }
-        function addProducer($name){
-            $sql = "INSERT INTO nhasanxuat (tenNSX) VALUES ('$name')";
+        function addProducer($name, $stt){
+            $sql = "INSERT INTO nhasanxuat (tenNSX, thuTu) VALUES ('$name', '$stt')";
             $kq= $this->execute($sql);
             return $kq;
             
