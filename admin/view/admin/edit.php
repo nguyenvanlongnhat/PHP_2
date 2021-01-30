@@ -170,7 +170,7 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <p><label><b>Tên điện thoại</b></label> <input name="ten_loai" value="<?=$row['tenDT']?>" class="form-control" type="text" placeholder= "Tên loại"> </p>
-                                    <p> <label><b>Giá</b></label><input name="gia" value="<?=$row['gia']?>" class="form-control" type="text" placeholder="giá"> </p>
+                                    <p> <label><b>Giá</b></label><input name="gia" value="<?=$row['gia']?>" class="form-control" type="text" placeholder="Giá"> </p>
                                     <p><label><b>Giá khuyến mãi</b></label> <input name="giakm" value="<?=$row['giaKM']?>" class="form-control" type="text" placeholder= "giá khuyến mãi"> </p>
                                     <input type="file" name="img"><img src="../upload/<?=$row['urlHinh']?>" style = "height: 60px; width: 65px;" >
                                     <p><label><b>Thời điểm nhập</b></label> <input type="date" name="thoidiemnhap" value="<?=$row['thoiDiemNhap']?>" class="form-control" type="text" placeholder= "Thời điểm nhập"> </p>

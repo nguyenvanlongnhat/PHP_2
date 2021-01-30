@@ -67,17 +67,19 @@ include_once './model/model_dienthoai.php';
           }
           function update(){
             if (isset($_POST['nutsave'])&&($_POST['nutsave'])) {
+              $idDT = $_POST['ma_loai'];
+              $row = $this->model->detailrecord($idDT);
               $tendt = $_POST['ten_loai'];
               $gia = $_POST['gia'];
               $giakm = $_POST['giakm'];
+              if ($_FILES['img']['name'] == null) {
+                  $img = $row['urlHinh'];
+              }else{
                 $img = $_FILES['img']['name'];
                 $pathimg =  "../upload/";
                 $target_file = $pathimg . basename($img);
-                if(move_uploaded_file($_FILES['img']['tmp_name'], $target_file)){
-                    $err_upload = "Upload thành công!";
-                }else{
-                    $err_upload = "";
-                }
+                move_uploaded_file($_FILES['img']['tmp_name'], $target_file);
+              }
               $thoidiemnhap = $_POST['thoidiemnhap'];
               $mota = $_POST['mota'];
               $solanxem = $_POST['solanxem'];
