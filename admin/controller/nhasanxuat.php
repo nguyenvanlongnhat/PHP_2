@@ -1,8 +1,5 @@
 <?php 
 include_once './model/model_nhasanxuat.php';
-ob_start();
-session_start();
-$_SESSION["123"] = "ok";
 // class model_nhasanxuat extends model_system {
 //     function getList(){
 //         $sql="SELECT * from dienthoai ";
@@ -44,7 +41,7 @@ $_SESSION["123"] = "ok";
         }
         function add(){
             if (isset($_POST["submit"]) && $_POST["submit"]) {
-                $this->model->addProducer($_POST["tennsx"]);
+                $this->model->addProducer($_POST["tennsx"], $_POST["sttnsx"]);
             }
             $page_file = "../admin/view/admin/themnsx.php";
             require_once "../admin/layout.php";

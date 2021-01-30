@@ -1,7 +1,5 @@
 <?php 
-ob_start();
-session_start();
-$_SESSION["admin118"] = "122";
+
 include_once './model/model_login.php';
 
 // class model_nhasanxuat extends model_system {
@@ -46,11 +44,12 @@ include_once './model/model_login.php';
             $getAdmin = $this->model->getAdmin();
             foreach ($getAdmin as $admin) {
                 if ($admin["userName"] == $_POST["user"] && $admin["password"] == $_POST["pass"]) {
-                    $_SESSION["admin118"] = "122";
-                    header("location:../admin/index.php");
+                    header("location:../admin/index.php?ctrl=dienthoai");
                 }
                 else {
+                    
                     require_once "../admin/view/admin/login.php";
+                    
                 }
             }
            

@@ -13,6 +13,7 @@
     <link href="../admin/view/admin/css/plugins/iCheck/custom.css" rel="stylesheet">
     <link href="../admin/view/admin/css/animate.css" rel="stylesheet">
     <link href="../admin/view/admin/css/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <link href="../admin/view/admin/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
@@ -32,7 +33,7 @@
             <ul class="nav metismenu" id="side-menu">
                 <li class="nav-header">
                     <div class="dropdown profile-element">
-                        <img alt="image" class="rounded-circle" src="../upload/admin.jpg"/>
+                        <img alt="image" class="rounded-circle" src="../upload/admin1.png"/>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="block m-t-xs font-bold">
                             <?php 
@@ -94,7 +95,7 @@
                     <a target="_blank" href="admin.php?act=500"><i class="fa fa-star"></i> <span class="nav-label">Landing Page</span> <span class="label label-warning float-right">NEW</span></a>
                 </li>
                 <li class="special_link">
-                    <a href="admin.php?act=500"><i class="fa fa-database"></i> <span class="nav-label"><?php echo $_SESSION["admin118"]?></span></a>
+                    <a href="admin.php?act=500"><i class="fa fa-database"></i> <span class="nav-label"></span></a>
                 </li>
             </ul>
 
@@ -103,7 +104,6 @@
     <?php if (file_exists($page_file) == true) {
                        require_once $page_file;
                     }?>
-    <script src="../admin/view/admin/js/jquery-3.1.1.min.js"></script>
 <script src="../admin/view/admin/js/popper.min.js"></script>
     <script src="../admin/view/admin/js/bootstrap.js"></script>
 <script src="../admin/view/admin/js/plugins/metisMenu/jquery.metisMenu.js"></script>

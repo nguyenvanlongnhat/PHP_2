@@ -166,7 +166,8 @@
                         <div class="row">
                                 <form role="form" method="post" enctype="multipart/form-data" action="index.php?ctrl=nhasanxuat&act=add">
                                     <div class="form-group"><label>Tên nhà sản xuất </label> <input type="text" placeholder="Tên nhà sản xuất" class="form-control" name="tennsx"></div>
-                                   
+                                    <div class="form-group"><label>Thứ tự sản xuất </label> <input type="text" placeholder="Tên nhà sản xuất" class="form-control" name="sttnsx"></div>
+
                                     
                                     <div class="input-group" style="margin-bottom:15px">
                                     
