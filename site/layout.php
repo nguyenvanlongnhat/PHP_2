@@ -44,71 +44,6 @@
 <!--[if IE 9]><body class="ie9 lt-ie10"><![endif]-->
 
 <body class="page-init">
-    <div class="ps-searchbox">
-        <div class="ps-searchbox__remove"><i class="fa fa-remove"></i></div>
-        <div class="container">
-            <header>
-                <p>Enter your keywords:</p>
-                <form method="post" action="/product-grid.html">
-                    <input class="form-control" type="text" placeholder="">
-                    <button><i class="ps-icon--search"></i></button>
-                </form>
-            </header>
-            <div class="ps-searchbox__result">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                        <div class="ps-product--list ps-product--list-light mt-60">
-                            <div class="ps-product__thumbnail">
-                                <a class="ps-product__overlay" href="product-detail.html"></a><img src="view/images/cake/img-cr-1.jpg" alt=""></div>
-                            <div class="ps-product__content">
-                                <h4 class="ps-product__title"><a href="product-detail.html">Amazin’ Glazin’</a></h4>
-                                <p>Lollipop dessert donut marzipan cookie bonbon sesame snaps chocolate.</p>
-                                <p class="ps-product__price">
-                                    <del>£25.00</del>£15.00
-                                </p><a class="ps-btn ps-btn--xs" href="cart.html">Order now<i class="fa fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="ps-product--list ps-product--list-light mt-60">
-                            <div class="ps-product__thumbnail">
-                                <a class="ps-product__overlay" href="product-detail.html"></a><img src="view/images/cake/img-cr-2.jpg" alt=""></div>
-                            <div class="ps-product__content">
-                                <h4 class="ps-product__title"><a href="product-detail.html">The Crusty Croissant</a></h4>
-                                <p>Lollipop dessert donut marzipan cookie bonbon sesame snaps chocolate.</p>
-                                <p class="ps-product__price">
-                                    <del>£25.00</del>£15.00
-                                </p><a class="ps-btn ps-btn--xs" href="cart.html">Order now<i class="fa fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                        <div class="ps-product--list ps-product--list-light mt-60">
-                            <div class="ps-product__thumbnail">
-                                <a class="ps-product__overlay" href="product-detail.html"></a><img src="view/images/cake/img-cr-3.jpg" alt=""></div>
-                            <div class="ps-product__content">
-                                <h4 class="ps-product__title"><a href="product-detail.html">Amazin’ Glazin’</a></h4>
-                                <p>Lollipop dessert donut marzipan cookie bonbon sesame snaps chocolate.</p>
-                                <p class="ps-product__price">
-                                    <del>£25.00</del>£15.00
-                                </p><a class="ps-btn ps-btn--xs" href="cart.html">Order now<i class="fa fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="ps-product--list ps-product--list-light mt-60">
-                            <div class="ps-product__thumbnail">
-                                <a class="ps-product__overlay" href="product-detail.html"></a><img src="view/images/cake/img-cr-4.jpg" alt=""></div>
-                            <div class="ps-product__content">
-                                <h4 class="ps-product__title"><a href="product-detail.html">The Crusty Croissant</a></h4>
-                                <p>Lollipop dessert donut marzipan cookie bonbon sesame snaps chocolate.</p>
-                                <p class="ps-product__price">
-                                    <del>£25.00</del>£15.00
-                                </p><a class="ps-btn ps-btn--xs" href="cart.html">Order now<i class="fa fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <footer class="text-center"><a class="ps-searchbox__morelink" href="product-grid.html">VIEW ALL RESULT</a></footer>
-        </div>
-    </div>
     <div class="header--sidebar"></div>
     <header class="header header--2" data-responsive="1199">
         <div class="header__top">
@@ -353,76 +288,7 @@
                 </div>
             </div>
         </footer>
-        <div class="modal-popup mfp-with-anim mfp-hide" id="quickview-modal" tabindex="-1">
-            <button class="modal-close"><i class="fa fa-remove"></i></button>
-            <div class="ps-product-modal ps-product--detail clearfix">
-                <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 ">
-                    <div class="ps-product__thumbnail">
-                        <div class="quickview--main" data-owl-auto="true" data-owl-loop="false" data-owl-speed="10000" data-owl-gap="0" data-owl-nav="false" data-owl-dots="false" data-owl-animate-in="" data-owl-animate-out="" data-owl-item="1" data-owl-item-xs="1" data-owl-item-sm="1"
-                            data-owl-item-md="1" data-owl-item-lg="1" data-owl-nav-left="&lt;i class=&quot;fa fa-angle-left&quot;&gt;&lt;/i&gt;" data-owl-nav-right="&lt;i class=&quot;fa fa-angle-right&quot;&gt;&lt;/i&gt;">
-                            <div class="ps-product__image"><img src="view/images/cake/img-cake-12.jpg" alt=""></div>
-                            <div class="ps-product__image"><img src="view/images/cake/img-cake-11.jpg" alt=""></div>
-                            <div class="ps-product__image"><img src="view/images/cake/img-cake-10.jpg" alt=""></div>
-                            <div class="ps-product__image"><img src="view//cake/img-cake-6.jpg" alt=""></div>
-                            <div class="ps-product__image"><img src="view/images/cake/img-cake-5.jpg" alt=""></div>
-                        </div>
-                        <div class="quickview--thumbnail" data-owl-auto="true" data-owl-loop="false" data-owl-speed="10000" data-owl-gap="20" data-owl-nav="false" data-owl-dots="false" data-owl-animate-in="" data-owl-animate-out="" data-owl-item="4" data-owl-item-xs="2" data-owl-item-sm="3"
-                            data-owl-item-md="4" data-owl-item-lg="4" data-owl-nav-left="&lt;i class=&quot;fa fa-angle-left&quot;&gt;&lt;/i&gt;" data-owl-nav-right="&lt;i class=&quot;fa fa-angle-right&quot;&gt;&lt;/i&gt;"><img src="view/images/cake/img-cake-12.jpg" alt=""><img src="view/images/cake/img-cake-11.jpg" alt=""><img src="view/images/cake/img-cake-10.jpg" alt=""><img src="view/images/cake/img-cake-6.jpg" alt=""><img src="view/images/cake/img-cake-5.jpg" alt=""></div>
-                    </div>
-                </div>
-                <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 ">
-                    <header>
-                        <h3 class="ps-product__name">Anytime Cakes</h3>
-                        <select class="ps-rating">
-                    <option value="1">1</option>
-                    <option value="1">2</option>
-                    <option value="1">3</option>
-                    <option value="1">4</option>
-                    <option value="5">5</option>
-                  </select>
-                        <p class="ps-product__price">£15.00 <del>£25.00</del></p>
-                        <div class="ps-product__meta">
-                            <p><span> Availability: </span> In stock</p>
-                            <p class="category"><span>CATEGORIES: </span><a href="product-grid.html">Cupcake</a>,<a href="product-grid.html">organic</a>,<a href="product-grid.html"> sugar</a>,<a href="product-grid.html"> sweet</a>,<a href="product-grid.html"> bio</a></p>
-                        </div>
-                        <div class="form-group ps-product__size">
-                            <label>Size:</label>
-                            <select class="ps-select" data-placeholder="Popupar product">
-                      <option value="01">Choose a option</option>
-                      <option value="01">Item 01</option>
-                      <option value="02">Item 02</option>
-                      <option value="03">Item 03</option>
-                    </select>
-                        </div>
-                        <div class="ps-product__shop">
-                            <div class="form-group--number">
-                                <button class="minus"><span>-</span></button>
-                                <input class="form-control" type="text" value="1">
-                                <button class="plus"><span>+</span></button>
-                            </div>
-                            <ul class="ps-product__action">
-                                <li><a href="#" data-tooltip="Add to wishlist"><i class="ps-icon--heart"></i></a></li>
-                                <li><a href="#" data-tooltip="Compare"><i class="ps-icon--reload"></i></a></li>
-                            </ul>
-                        </div>
-                    </header>
-                    <footer><a class="ps-btn--fullwidth ps-btn ps-btn--sm" href="#">Purchase<i class="fa fa-angle-right"></i></a>
-                        <p class="ps-product__sharing">Share with:<a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-twitter"></i></a></p>
-                    </footer>
-                </div>
-            </div>
-        </div>
-        <div class="mfp-with-anim modal-popup mfp-hide" id="modal--subscribe">
-            <button class="modal-close"><i class="fa fa-remove"></i></button><img src="view/view/images/img-demo-4.png" alt="">
-            <form action="_action" method="post">
-                <h3>STAY UP-TO-DATE WITH OUR NEWLETTER</h3>
-                <p>Follow us & get <span> 20% OFF </span> coupon for first purchase !!!!!</p>
-                <div class="form-group">
-                    <input class="form-control" type="text" placeholder="Type your email...">
-                    <button class="ps-btn ps-btn--sm">Subscribe</button>
-                </div>
-            </form>
-        </div>
+        
     </div>
     <!-- JS Library-->
     <script type="text/javascript" src="view/plugins/jquery/dist/jquery.min.js"></script>
