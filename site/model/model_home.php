@@ -1,5 +1,4 @@
 <?php
-
 require_once '../system/model_system.php';
 class model_home extends model_system {
         function getList(){
@@ -8,12 +7,12 @@ class model_home extends model_system {
             return $kq;
         }
         function getNSX(){
-            $sql = "SELECT * from nhasanxuat";
+            $sql = "SELECT * from nhasanxuat ";
             $kq = $this->query($sql);
             return $kq;
         }
-        function getProductDetail($id){
-            $sql = "SELECT * from dienthoai where idDT = $id";
+        function getProduct($getIdProduct){
+            $sql = "SELECT dienthoai.tenDT, dienthoai.urlHinh, nhasanxuat.tenNSX from dienthoai, nhasanxuat where dienthoai.idDT = $getIdProduct and dienthoai.idNSX=nhasanxuat.idNSX";
             $kq = $this->query($sql);
             return $kq;
         }
