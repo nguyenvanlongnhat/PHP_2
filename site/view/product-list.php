@@ -123,11 +123,12 @@
                       <?php foreach ($getProductNSX as $getNSX) {
                           $img = $getNSX['urlHinh'];
                           $tenDT = $getNSX['tenDT'];
+                          $idDT = $getNSX['idDT'];
                           $gia = $this->model->formatMoney($getNSX['gia']);
     
                           echo '<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ">
                                   <div class="ps-product">
-                                  <div class="ps-product__thumbnail"><a class="ps-product__overlay" href="product-detail.html"></a><img src="../upload/'.$img.'" alt="">
+                                  <div class="ps-product__thumbnail"><a class="ps-product__overlay" href="index.php?act=detail&id='.$idDT.'"></a><img src="../upload/'.$img.'" alt="">
                                     <ul class="ps-product__action">
                                       <li><a class="popup-modal" href="#quickview-modal" data-effect="mfp-zoom-out" data-tooltip="View"><i class="ps-icon--search"></i></a></li>
                                       <li><a href="#" data-tooltip="Add to wishlist"><i class="ps-icon--heart"></i></a></li>
@@ -135,7 +136,7 @@
                                       <li><a href="#" data-tooltip="Add to cart"><i class="ps-icon--shopping-cart"></i></a></li>
                                     </ul>
                                   </div>
-                                  <div class="ps-product__content"><a class="ps-product__title" href="product-detail.html"><strong>'.$tenDT.'</strong></a></div>
+                                  <div class="ps-product__content"><a class="ps-product__title" href="index.php?act=detail&id='.$idDT.'"><strong>'.$tenDT.'</strong></a></div>
                                     <p class="ps-product__price" style="text-align: center";>'.$gia.'VND</p>
                                   </div>
                                 </div>';
