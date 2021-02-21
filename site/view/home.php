@@ -4,6 +4,7 @@
                     <h4 class="ps-section__top">Making People Happy</h4>
                     <h3 class="ps-section__title ps-section__title--full">Best Cupcakes</h3>
                 </div>
+                
                 <div class="ps-section__content">
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
                         <div class="ps-product">

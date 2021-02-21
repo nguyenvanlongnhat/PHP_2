@@ -1550,12 +1550,12 @@ textarea.form-control {
 .form-group--number button {
     display: inline-block;
     height: 40px;
-    width: 40px;
+    width: 30px;
     border: none;
     background-color: #000;
     font-family: "Varela Round", sans-serif;
     color: #fff;
-    font-size: 20px;
+    font-size: 15px;
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
     transition: all 0.4s ease;
@@ -3017,7 +3017,6 @@ button.ps-btn--fullwidth {
 }
 
 .ps-product--detail .tab-pane p {
-    margin-bottom: 20px;
     font-family: "Varela Round", sans-serif;
     font-size: 14px;
     line-height: 1.6em;
